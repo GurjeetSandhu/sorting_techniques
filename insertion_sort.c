@@ -9,10 +9,10 @@ void insertion(int array[], int m)
     {
       temp = array[j];
       k=j-1;
-      while(k>=0 && array[j]>temp)
+      while(k>=0 && array[k]>temp)
 	{
 	  array[k+1]=array[k];
-	  k=k-1;
+	  k--;
 	}
       array[k+1]=temp;
          }
@@ -22,7 +22,7 @@ void insertion(int array[], int m)
 void printarr(int array[], int g)
 
 { int i;
-    printf("\n Sorted elements are");
+    printf("Sorted elements are\n");
     	for(i=0;i<g;i++)
 	  {
 	    printf("\n %d \n ", array[i]);
@@ -37,7 +37,7 @@ int main()
   printf("Size of array\n");
   scanf("%d",&n);
   assert(n>0);
-    printf("\nEnetr all the elements");
+    printf("\nEnetr all the elements\n");
     for(i=0;i<n;i++)
       {
 	scanf("%d",& a[i]);
