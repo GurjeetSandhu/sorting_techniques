@@ -4,30 +4,35 @@
 
 void selection(int a[], int m)
 {
-  int j, k, min=0, temp;
+  int j, k, min, temp;
   for(j=0;j<m-1;j++)
     {
       min=j;
       for(k=j+1;k<m;k++)
 	{
 	  if(a[k]<a[min])
-	    {min=k;} 
-	  temp = a[min];
-	  a[min]=a[j];
-	  a[j] = temp;
+	    {
+	      min=k;
+	    } 
+	}
+      if(min!=j)
+	{
+	  temp = a[j];
+	  a[j] = a[min];
+	  a[min] = temp;
 	}
     }
-
 }
 
 void printarr(int arr[], int g)
 {
   int l;
   printf("\n Sorted elements are \n ");
-  for(l=0;l<g;l++);
+  for(l=0;l<g;l++)
+    {
   printf("\n %d \n", arr[l]);
+    }
 }
-
 
 int main()
 {
